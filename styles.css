@@ -1,0 +1,57 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+.float-child {
+    width: 40%;
+    float: left;
+    padding: 20px;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 14px;
+    width: 300px;
+}
+.clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+}
+pre {
+    font-size: 14px;
+}
+p, pre {
+    margin-top: 20px;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.annotation-group text {
+    fill: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+.annotation-group path.connector {
+    stroke: red;
+    stroke-width: 2;
+}

@@ -1,0 +1,68 @@
+<html lang = "en">
+<head>
+    <title>MLB Throughout the Years</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <script src ="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>MLB Throughout the Years</h1>
+    <p>The dataset used for the following plots is from: <a href= "https://www.kaggle.com/datasets/open-source-sports/baseball-databank">Kaggle</a> </p>
+    <p>The Teams.csv file was used within the dataset (specifically the teams from 2005-2015), with an added column of location to indicate where the team is located.</p>
+    <div id="float-container">
+        <div id="era-container" class="float-child">
+            <div id="era-graph"></div>
+            <div id="era-tooltip" class="tooltip"></div>
+            <div id="era-slider"></div>
+        </div>
+        <div id="barplot-container" class="float-child">
+            <div id="barplot"></div>
+            <div id="barplot-tooltip" class="tooltip"></div>
+            <div id="slider-range"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <pre>
+        Baseball is a sport that has been around for years. It has been a sport loved by many, especially by Americans. 
+        Within baseball, there are so many statistics that a lot don't realize. One important statistic is taking a look at
+        a team's ERA, which stands for Earned Runs Average. This stat is so important that one of the criteria for winning the
+        Cy Young Award for pitchers relies on having a low ERA.
+    </pre>
+    <p>How is ERA calculated?</p>
+    <pre>
+        The formula for calculating ERA is pretty simple.
+         (earned runs * total innings) / innings pitched
+        First begin with multiplying the earned runs by the total number of innings. Then divide innings pitched.
+    </pre>
+    <p>What number is "good" for ERA?</p>
+    <pre>
+        The lower the number, the better! Majority of ERA's for the MLB are between 2.00 and 5.00.
+    </pre>
+    <p> Let's investigate for the year 2005!</p>
+    <pre>
+        Background info: Above, on the left, is a graph (blue bars) that indicates ERA's for the 30 teams in the MLB.
+        On the right hand side is a graph (green bars) that indicates the total # of wins for the 30 teams in the MLB.
+        The three letter franchise ID for each team is listed on the y-axis and the values of either ERA/Wins are on the x-axis.
+        For more information, hover over a bar!
+    </pre>
+    <pre>
+        These charts specifically focus on the year 2005. In 2005, the Chicago White Sox won the world series (this is sadly the last time they won :( ).
+        If you hover over the 'CHW' bar on the ERA bar graph, you'll notice the ERA was 3.61, which is tied for 3rd best ERA for that year when comparing the other teams.
+        If you hover over the same bar on the Wins bar graph and comparing the ERA to the # of Chicago White Sox wins for that season, the White Sox
+        were 2nd most wins for that year.
+        Next, take a look at the team with the highest ERA and see how their number of wins compares. As you can see, ERA has an impact!
+        Lower the ERA, higher number of wins. 
+    </pre>
+    <p>Now you can take a look at ERA, Wins, and Losses throughout the 10 year span of 2005-2015 to see if this holds true! </p>
+    <p>Click the buttons below to activate the slider for years!</p>
+    <div id="button-container">
+        <button onclick="scene3('ERA')">Show ERA 2005-2015</button>
+        <button onclick="scene4('W')">Show Wins 2005-2015</button>
+        <button onclick="scene4('L')">Show Losses 2005-2015</button>  
+    </div>
+</body>
+</html>
